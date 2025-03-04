@@ -1327,3 +1327,88 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Задание 2
+# Написать программу – конвертер валют. Реализовать
+# общение с пользователем через меню.
+
+
+
+def convert_usd_to_rub():
+    usd = float(input("Введите сумму в долларах: "))
+    rub = usd * 70
+    print(f"Сумма в рублях: {rub}")
+    
+def convert_rub_to_usd():
+    rub = float(input("Введите сумму в рублях: "))
+    usd = rub / 70
+    print(f"Сумма в долларах: {usd}")
+
+def convert_euro_to_rub():
+    euro = float(input("Введите сумму в евро: "))
+    rub = euro * 80
+    print(f"Сумма в рублях: {rub}")
+
+def convert_rub_to_euro():
+    rub = float(input("Введите сумму в рублях: "))
+    euro = rub / 80
+    print(f"Сумма в евро: {euro}")
+    
+    
+
+
+def display_menu():
+    options = [
+        "╔═══════════════════════════════╗",
+        "║   Выберите перевод:           ║",
+        "╠═══════════════════════════════╣",
+        "║ • 1. Доллары в рубли          ║",
+        "║ • 2. Рубли в доллары          ║",
+        "║ • 3. Евро в рубли             ║",
+        "║ • 4. Рубли в евро             ║",
+        "║ • 5. Выход                    ║",
+        "╚═══════════════════════════════╝"
+    ]
+
+    for option in options:
+        print(option)
+        
+while True:
+    display_menu()
+    choice = input("Введите номер действия: ")
+    
+    if choice == "1":
+        convert_usd_to_rub()
+    elif choice == "2":
+        convert_rub_to_usd()
+    elif choice == "3":
+        convert_euro_to_rub()
+    elif choice == "4":
+        convert_rub_to_euro()
+    elif choice == "5":
+        print("Выход из программы.")
+        break   
+    else:
+        print("Некорректный ввод. Пожалуйста, повторите.")
+
+
+
+input("Нажмите Enter, чтобы продолжить...")  # добавил эту строк
+# чтобы программу не закрывала сразу после запуска
+# и давал возможность увидеть результаты работы программы. 
