@@ -1435,8 +1435,20 @@
 # 1 2 3 !4! 5 6 7
 
 
+def human():
+    start = int(input("Введите начало диапазона: "))
+    end = int(input("Введите конец диапазона: "))
+    num = int(input("Введите число: "))
+    
+    while num < start or num > end:
+        print("Число не попадает в диапазон. Пожалуйста, повторите.")
+        num = int(input("Введите число: "))
+    
+    for i in range(start, end + 1):
+        if i == num:
+            print(f"!{i}!", end=" ")
+        else:
+            print(i, end=" ")
 
 
-
-
-hkgkgk
+human()
