@@ -1435,20 +1435,60 @@
 # 1 2 3 !4! 5 6 7
 
 
-def human():
-    start = int(input("Введите начало диапазона: "))
-    end = int(input("Введите конец диапазона: "))
-    num = int(input("Введите число: "))
+# def the_range_stuff():
     
-    while num < start or num > end:
-        print("Число не попадает в диапазон. Пожалуйста, повторите.")
-        num = int(input("Введите число: "))
+#     start = int(input("Введите начало диапазона: "))
+#     end = int(input("Введите конец диапазона: "))
+#     num = int(input("Введите число: "))
     
-    for i in range(start, end + 1):
-        if i == num:
-            print(f"!{i}!", end=" ")
+#     while num < start or num > end:
+#         print("Число не попадает в диапазон. Пожалуйста, повторите.")
+#         num = int(input("Введите число: "))
+    
+#     for i in range(start, end + 1):
+#         if i == num:
+#             print(f"!{i}!", end=" ")
+#         else:
+#             print(i, end=" ")
+
+
+# the_range_stuff()
+
+
+
+
+
+
+
+
+
+
+# Задание 4
+# Написать игру «Угадай число». Программа загадывает
+# число в диапазоне от 1 до 500 Пользователь пытается
+
+import random
+import math
+
+def the_guessing_game():
+    number_to_guess = random.randint(1, 500)
+    max_guesses = math.ceil(math.log2(500))
+    guesses = 0
+    while True:
+        user_guess = int(input("Введите число от 1 до 500: "))
+        guesses += 1
+        if user_guess < number_to_guess:
+            print("Ваше число меньше загаданного. Пожалуйста, попробуйте еще раз.")
+        elif user_guess > number_to_guess:
+            print("Ваше число больше загаданного. Пожалуйста, попробуйте еще раз.")
         else:
-            print(i, end=" ")
-
-
-human()
+            print(f"Вы угадали число за {guesses} попыток. Поздравлятю!")
+            break
+        print(f"Вы использовали {guesses} попыток. Это меньше {max_guesses} попыток, которые вы могли использовать.")
+        if guesses == max_guesses:
+            print("Вы использовали все доступные попытки. Игра окончена.")
+            break
+        
+            
+            
+            
