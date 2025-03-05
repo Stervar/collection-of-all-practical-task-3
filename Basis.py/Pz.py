@@ -1534,9 +1534,4 @@
 # ***
 # ***
 
-def side_square():
-    side = int(input("Введите размер стороны квадрата: "))
-    for i in range(side):
-        print("*" * side)
-        side_square()
-        
+
