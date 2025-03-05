@@ -1530,6 +1530,8 @@
 
 
 
+
+
 # Задание 1
 # Пользователь вводит с клавиатуры размер стороны
 # квадрата. Требуется отобразить на экран заполненный
@@ -1551,6 +1553,8 @@
 # for i in range(int_side):
 #     print("*" * int_side)
     
+
+
 
 
 
@@ -1591,8 +1595,17 @@
     
     
     
+        
     
     
+    
+    
+    
+    
+    
+    
+
+
 
 
 # Задание 3
@@ -1604,7 +1617,18 @@
 
 
 
-a_lateral_side = int(input("Введите левую и правую сторону квадрата :"))
-for i in range(a_lateral_side):
-    print("*", end="")
-    
+
+
+
+
+# a_lateral_side = int(input("Введите левую и правую сторону квадрата :"))
+# b_lateral_side = int(input("Введите верхнюю и нижнюю сторону квадрата :"))
+
+# print("*" * a_lateral_side)
+
+
+# for i in range(b_lateral_side - 2):
+#     print("*" + " " * (a_lateral_side - 2) + "*")
+
+# if b_lateral_side > 1:
+#     print("*" * a_lateral_side)
