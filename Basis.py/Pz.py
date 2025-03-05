@@ -1535,3 +1535,14 @@
 # ***
 
 
+
+
+
+
+
+
+# int_side = int(input("Введите размер стороны квадрата: "))
+# for i in range(int_side):
+#     print("*" * int_side)
+    
+
