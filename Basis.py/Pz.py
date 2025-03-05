@@ -1367,7 +1367,7 @@
 
 # def convert_rub_to_euro():
 #     rub = float(input("Введите сумму в рублях: "))
-#     euro = rub / 80
+#     euro = rub / 5656
 #     print(f"Сумма в евро: {euro}")
     
     
@@ -1467,28 +1467,76 @@
 # Написать игру «Угадай число». Программа загадывает
 # число в диапазоне от 1 до 500 Пользователь пытается
 
-import random
-import math
+# import random
+# import math
 
-def the_guessing_game():
-    number_to_guess = random.randint(1, 500)
-    max_guesses = math.ceil(math.log2(500))
-    guesses = 0
-    while True:
-        user_guess = int(input("Введите число от 1 до 500: "))
-        guesses += 1
-        if user_guess < number_to_guess:
-            print("Ваше число меньше загаданного. Пожалуйста, попробуйте еще раз.")
-        elif user_guess > number_to_guess:
-            print("Ваше число больше загаданного. Пожалуйста, попробуйте еще раз.")
-        else:
-            print(f"Вы угадали число за {guesses} попыток. Поздравлятю!")
-            break
-        print(f"Вы использовали {guesses} попыток. Это меньше {max_guesses} попыток, которые вы могли использовать.")
-        if guesses == max_guesses:
-            print("Вы использовали все доступные попытки. Игра окончена.")
-            break
+# def the_guessing_game():
+#     print(f"Угадайте число от 1 до 500. У вас есть {max_guesses} попыток.")
+
+
+#     number_to_guess = random.randint(1, 500)
+#     max_guesses = math.ceil(math.log2(500))
+#     guesses = 0
+#     while guesses < max_guesses:
+
+#         user_guess = int(input("Введите число от 1 до 500: "))
+#         guesses += 1
+#         if user_guess < number_to_guess:
+#             print("Ваше число меньше загаданного. Пожалуйста, попробуйте еще раз.")
+#         elif user_guess > number_to_guess:
+#             print("Ваше число больше загаданного. Пожалуйста, попробуйте еще раз.")
+#         else:
+#             print(f"Вы угадали число {number_to_guess} за {guesses} попыток. Поздравляю!")
+
+#             break
+#         print(f"Вы использовали {guesses} попыток. Это меньше {max_guesses} попыток, которые вы могли использовать.")
+#         if guesses == max_guesses:
+#             print(f"Вы использовали все доступные попытки. Загаданное число было {number_to_guess}. Игра окончена.")
+
+#             break
         
-            
-            
-            
+# the_guessing_game()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Модуль 3 Циклы. Часть 4
+
+
+
+
+
+
+# Задание 1
+# Пользователь вводит с клавиатуры размер стороны
+# квадрата. Требуется отобразить на экран заполненный
+# квадрат. Размер стороны равен введённому размеру.
+# Например, если пользователь ввёл 3 на экране будет
+# выведено:
+# ***
+# ***
+# ***
+
+def side_square():
+    side = int(input("Введите размер стороны квадрата: "))
+    for i in range(side):
+        print("*" * side)
+        side_square()
+        
