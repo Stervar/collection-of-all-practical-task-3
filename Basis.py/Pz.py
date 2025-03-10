@@ -1839,10 +1839,15 @@ def buy_game_console():
 int_height = int(input("Введите высоту квадрата:"))
 int_width = int(input("Введите ширину квадрата:"))
 int_size = int(input("Введите размер клетки:"))
+
 for i in range(int_height):
     for j in range(int_width):
         if (i + j) % 2 == 0:
             print("*" * int_size, end="")
+        else:
+            print("-" * int_size, end="")
+            
+print()
         
             
             
